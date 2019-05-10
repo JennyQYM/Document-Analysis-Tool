@@ -22,3 +22,5 @@ $ python runserver.py
 
 - documents similarity matrix calculated by the LDA model
 - document's wordcloud | keywords | key phrases 
+
+For more infomation, please see the Document Analysis Tool.pdf
