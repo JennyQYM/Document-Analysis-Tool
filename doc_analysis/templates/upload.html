@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h3>NLP tool will analyze whole document files</h3>
+  <br>
+  <br>
+
+  <h5>Upload the whole document folder here</h1>
+  <br>
+  <form method='POST' action="" enctype='multipart/form-data'>
+      <br>
+      <input type=file name="file" webkitdirectory="">
+      <input type=submit value=Upload >
+      <br>
+      <br>
+
+  </form>
+</div>
+{% endblock %}

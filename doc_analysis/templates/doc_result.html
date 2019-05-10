@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Analysis Result for document {{id}}</h1>
+  <br>
+  <br>
+  <h3>word cloud</h3>
+
+  <img src="{{ url_for('static', filename='wordcloud/wordcloud.png',_t=val1) }}" width="400" height="300">
+  <br>
+  <br>
+  <h3>key words extraction</h3>
+  <ul>
+    {% for keyword in keywords  %}
+    <li>{{keyword}}</li>
+    {% endfor %}
+  </ul>
+  <br>
+  <h3>key phrases extractionn</h3>
+  <ul>
+    {% for keyphrase in keyphrases  %}
+    <li>{{keyphrase}}</li>
+    {% endfor %}
+  </ul>
+  <br>
+  <h3>topic model</h3>
+  <ul>
+    {% for topic in topics  %}
+    <li>{{topic}}</li>
+    {% endfor %}
+  </ul>
+  <br>
+  <h3>document correlation matrix heat map</h3>
+  <img src="{{ url_for('static', filename='heatmap/heatmap.png',_t=val1) }}" width="400" height="300">
+
+</div>
+{% endblock %}

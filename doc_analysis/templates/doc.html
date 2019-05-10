@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h3>Enter the document number you want to analyze</h3>
+  <br>
+  <h5>Attention: Upload folder first</h5>
+  <br>
+  <p>ep: for doc1.txt, enter 1 at Document number:</p>
+  <br>
+
+  <form method='POST' action="" enctype='multipart/form-data'>
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.id.label }} {{ form.id() }}
+      {{ form.submit() }}
+      <br>
+      <br>
+</div>
+{% endblock %}

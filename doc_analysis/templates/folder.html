@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h3>Enter the word</h3>
+  <br>
+  <h5>Attention: Upload folder first</h5>
+  <br>
+  <p>ep: philosophy</p>
+  <br>
+
+  <form method='POST' action="" enctype='multipart/form-data'>
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      {{ form.targetword.label }} {{ form.targetword() }}
+      {{ form.submit() }}
+
+
+  </form>
+</div>
+{% endblock %}

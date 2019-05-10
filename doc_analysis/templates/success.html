@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Upload Folder Succeed</h1>
+  <p>Below is the top 10 word of documents after removing stop words</p>
+  {{ freq|safe }}
+  <br>
+  <p>Please select Folder analysis or Document analysis from the nav bar for the analytical result.</p>
+</div>
+{% endblock %}
